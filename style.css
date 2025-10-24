@@ -1,0 +1,219 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      /* Navbar */
+      .navbar {
+        background: #f76c6c;
+        color: #fff;
+        padding: 15px;
+        text-align: center;
+      }
+
+      .navbar h1 {
+        font-size: 28px;
+        letter-spacing: 1px;
+      }
+
+      /* Container */
+      .container {
+        max-width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: flex-start;
+      }
+
+      /* Book box */
+      .bookbox {
+        max-width: 400px;
+        background: #fffa6d;
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: inline-block;
+        transition: transform 0.2s ease;
+      }
+
+      .bookbox:hover {
+        transform: scale(1.02);
+      }
+
+      /* Headings */
+      .bookbox h2 {
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .bookbox h4 {
+        color: #666;
+        font-style: italic;
+        margin-bottom: 15px;
+      }
+
+      /* Paragraph */
+      .bookbox p {
+        color: #444;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+
+      /* Delete button */
+      .bookbox button {
+        background: #e74c3c;
+        color: white;
+        border: none;
+        padding: 10px 18px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background 0.3s ease;
+      }
+
+      .bookbox button:hover {
+        background: #c0392b;
+      }
+
+      /* Add Button (Floating Button) */
+      .addbutton {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: none;
+        background: #f76c6c;
+        color: white;
+        font-size: 32px;
+        cursor: pointer;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s ease, background 0.3s ease;
+      }
+
+      .addbutton:hover {
+        background: #e74c3c;
+        transform: scale(1.1);
+      }
+
+      /* Overlay */
+      .overlay {
+        background-color: black;
+        opacity: 0.8;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        display: none;
+      }
+
+      /* Popup Box */
+      .popupbox {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 350px;
+        background: #fff;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+        z-index: 2;
+        display: none;
+        animation: popupscale 0.3s ease;
+      }
+
+      /* Popup animation */
+      @keyframes popupscale {
+        from {
+          transform: translate(-50%, -50%) scale(0.8);
+          opacity: 0;
+        }
+        to {
+          transform: translate(-50%, -50%) scale(1);
+          opacity: 1;
+        }
+      }
+
+      /* Popup heading */
+      .popupbox h2 {
+        margin-bottom: 15px;
+        text-align: center;
+        color: #f76c6c;
+      }
+
+      /* Popup inputs */
+      .popupbox input,
+      .popupbox textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+        outline: none;
+        transition: border 0.2s;
+      }
+
+      .popupbox input:focus,
+      .popupbox textarea:focus {
+        border-color: #f76c6c;
+      }
+
+      /* Textarea */
+      .popupbox textarea {
+        resize: none;
+        height: 80px;
+      }
+
+      /* Popup buttons */
+      .popupbox button {
+        padding: 10px 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-right: 10px;
+        margin-top: 10px;
+        font-size: 14px;
+        transition: background 0.3s ease;
+      }
+
+      #addbook {
+        background: #27ae60;
+        color: white;
+      }
+
+      #addbook:hover {
+        background: #1e8449;
+      }
+
+      #cancelpopup {
+        background: #e74c3c;
+        color: white;
+      }
+
+      #cancelpopup:hover {
+        background: #c0392b;
+      }
+
+      /* Responsive design */
+      @media (max-width: 768px) {
+        .container {
+          justify-content: center;
+        }
+
+        .bookbox {
+          max-width: 100%;
+        }
+
+        .popupbox {
+          width: 90%;
+        }
+      }

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add book</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <h1>Add Your Book</h1>
+    </div>
+    <div class="container">
+      <div class="bookbox">
+        <h2>One Day in december</h2>
+        <h4>Josie Silver</h4>
+        <p>
+          Laurie is pretty sure love at first sight doesn't exist anywhere but
+          the movies. But then, through a misted-up bus window one snowy
+          December day, she sees a man who she knows instantly is the one. Their
+          eyes meet, there's a moment of pure magic... and then her bus drives
+          away.
+        </p>
+        <button onclick="del(event)">Delete</button>
+      </div>
+    </div>
+    <div class="overlay"></div>
+    <div class="popupbox">
+      <h2>Add Book</h2>
+      <form action="">
+        <input
+          type="text"
+          placeholder="Book Title"
+          name=""
+          id="booktitle"
+          required
+        />
+        <input
+          type="text"
+          placeholder="Book Author"
+          name=""
+          id="bookauthor"
+          required
+        />
+        <textarea
+          placeholder="Book Description"
+          id="bookdescription"
+        ></textarea>
+        <button id="addbook">Add</button>
+        <button id="cancelpopup">Cancel</button>
+      </form>
+    </div>
+    <button class="addbutton" id="addpopup">+</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
